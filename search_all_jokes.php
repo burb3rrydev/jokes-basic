@@ -21,9 +21,9 @@
             include "db_connect.php";
             
             // SQL query to get joke details along with the username of the user who created the joke
-            $sql = "SELECT Jokes_table.JokeID, Jokes_table.Joke_question, Jokes_table.Joke_answer, users.user_name 
-                    FROM Jokes_table 
-                    JOIN users ON Jokes_table.user_id = users.user_id";
+            $sql = "SELECT jokes_table.JokeID, jokes_table.Joke_question, jokes_table.Joke_answer, users.user_name 
+                    FROM jokes_table 
+                    JOIN users ON jokes_table.user_id = users.user_id";
                     
             // Prepare the statement
             $stmt = $mysqli->prepare($sql);
